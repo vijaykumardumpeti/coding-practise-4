@@ -1,10 +1,10 @@
-import Counter from './components/ClickCounter/index'
+import ClickCounter from './components/ClickCounter'
 
 import './App.css'
 
 const App = () => (
   <div className="container">
-    <Counter />
+    <ClickCounter />
   </div>
 )
 
