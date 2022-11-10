@@ -11,4 +11,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .container {
+  background-color: #f1f5f8;
+  background-size: cover;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
