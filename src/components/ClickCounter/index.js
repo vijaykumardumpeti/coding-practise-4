@@ -1,21 +1,31 @@
 // Write your code here
-import Component from 'react'
+
+import {Component} from 'react'
 import './index.css'
 
-class Counter extends Component {
-  state = {count: 0}
+class ClickCounter extends Component {
+  state = {countings: 0}
 
-  clicking = () => {
-    this.setState(prevState => ({count: prevState.count + 1}))
+  onIncrement = () => {
+    this.setState(prevState => ({countings: prevState.countings + 1}))
   }
+
   render() {
-    const {count} = this.state
+    const {countings} = this.state
     return (
       <div>
-        <h1 className="heading">The Button has been clicked {count} times</h1>
-        <p>Click the button to increase the count!</p>
-        <div>
-          <button onClick={this.clicking} type="button">
+        <h1 className="heading">
+          The Button has been clicked{' '}
+          <span className="anchor">{countings}</span>
+          times
+        </h1>
+        <p className="paragraph">Click the button to increase the count!</p>
+        <div className="btn-container">
+          <button
+            onClick={this.onIncrement}
+            className="btn-style"
+            type="button"
+          >
             Click Me!
           </button>
         </div>
@@ -23,5 +33,4 @@ class Counter extends Component {
     )
   }
 }
-
-export default Counter
+export default ClickCounter
